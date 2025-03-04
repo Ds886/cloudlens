@@ -97,7 +97,7 @@ func setFoldersAndFiles(folders []types.CommonPrefix, files []types.Object) []aw
 					ObjectType:   internal.FILE_TYPE,
 					LastModified: IST.Format("Mon Jan _2 15:04:05 2006"),
 					SizeInBytes:  fi.Size,
-					Size:         humanize.Bytes(uint64(fi.Size)),
+					Size:         humanize.Bytes(uint64(*fi.Size)),
 					StorageClass: string(fi.StorageClass),
 				}
 				s3Objects = append(s3Objects, o)
