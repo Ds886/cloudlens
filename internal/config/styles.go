@@ -3,7 +3,7 @@ package config
 import (
 	"fmt"
 
-	"github.com/gdamore/tcell/v2"
+	"github.com/derailed/tcell/v2"
 )
 
 const (

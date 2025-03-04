@@ -6,7 +6,7 @@ import (
 
 	"github.com/atotto/clipboard"
 	awsV2 "github.com/aws/aws-sdk-go-v2/aws"
-	"github.com/gdamore/tcell/v2"
+	"github.com/derailed/tcell/v2"
 	"github.com/one2nc/cloudlens/internal"
 	"github.com/one2nc/cloudlens/internal/aws"
 	"github.com/one2nc/cloudlens/internal/ui"

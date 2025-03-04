@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/derailed/tview"
-	"github.com/gdamore/tcell/v2"
+	"github.com/derailed/tcell/v2"
 )
 
 const DropDownIndicatiorColor string = "green"

@@ -11,7 +11,7 @@ import (
 	cfg "github.com/aws/aws-sdk-go-v2/config"
 	awsS "github.com/aws/aws-sdk-go/aws"
 	"github.com/derailed/tview"
-	"github.com/gdamore/tcell/v2"
+	"github.com/derailed/tcell/v2"
 	"github.com/one2nc/cloudlens/internal"
 	"github.com/one2nc/cloudlens/internal/aws"
 	"github.com/one2nc/cloudlens/internal/config"

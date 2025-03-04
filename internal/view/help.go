@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	"github.com/derailed/tview"
-	"github.com/gdamore/tcell/v2"
+	"github.com/derailed/tcell/v2"
 	"github.com/one2nc/cloudlens/internal"
 	"github.com/one2nc/cloudlens/internal/model"
 	"github.com/one2nc/cloudlens/internal/ui"

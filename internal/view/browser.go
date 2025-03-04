@@ -4,7 +4,7 @@ import (
 	"context"
 	"sync"
 
-	"github.com/gdamore/tcell/v2"
+	"github.com/derailed/tcell/v2"
 	"github.com/one2nc/cloudlens/internal/ui"
 )
 

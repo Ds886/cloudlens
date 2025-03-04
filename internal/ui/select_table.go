@@ -2,7 +2,7 @@ package ui
 
 import (
 	"github.com/derailed/tview"
-	"github.com/gdamore/tcell/v2"
+	"github.com/derailed/tcell/v2"
 )
 
 // SelectTable represents a table with selections.
