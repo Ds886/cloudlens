@@ -120,8 +120,11 @@ func GetBuckEncryption(cfg aws.Config, bucketName string) *types.ServerSideEncry
 
 func GetBuckLifecycle(cfg aws.Config, bucketName string) *s3.GetBucketLifecycleConfigurationOutput {
 	s3Serv := *s3.NewFromConfig(cfg)
-	blc, _ := s3Serv.GetBucketLifecycleConfiguration(context.Background(), &s3.GetBucketLifecycleConfigurationInput{
+	blc, blcErr := s3Serv.GetBucketLifecycleConfiguration(context.Background(), &s3.GetBucketLifecycleConfigurationInput{
 		Bucket: &bucketName,
 	})
+	if blcErr != nil {
+		log.Info().Msgf("blc err: %s", blcErr)
+	}
 	return blc
 }

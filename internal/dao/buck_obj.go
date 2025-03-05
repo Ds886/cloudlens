@@ -91,13 +91,14 @@ func setFoldersAndFiles(folders []types.CommonPrefix, files []types.Object) []aw
 			launchTime := fi.LastModified
 			IST := launchTime.In(loc)
 			keyA := strings.Split(*fi.Key, "/")
+			fiSize := awsV2.ToInt64(fi.Size)
 			if keyA[len(keyA)-1] != "" {
 				o := aws.S3Object{
 					Name:         keyA[len(keyA)-1],
 					ObjectType:   internal.FILE_TYPE,
 					LastModified: IST.Format("Mon Jan _2 15:04:05 2006"),
-					SizeInBytes:  fi.Size,
-					Size:         humanize.Bytes(uint64(*fi.Size)),
+					SizeInBytes:  fiSize,
+					Size:         humanize.Bytes(uint64(fiSize)),
 					StorageClass: string(fi.StorageClass),
 				}
 				s3Objects = append(s3Objects, o)

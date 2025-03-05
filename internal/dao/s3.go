@@ -47,6 +47,9 @@ func (s3 *S3) Describe(BName string) (string, error) {
 	blc := aws.GetBuckLifecycle(cfg, BName)
 	log.Info().Msgf("be is: %v", be)
 	log.Info().Msgf("blc is: %v", blc)
+	if blc == nil {
+		return merge(*be, nil), nil
+	}
 	return merge(*be, blc.Rules), nil
 }
 
